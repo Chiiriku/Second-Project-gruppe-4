@@ -1,8 +1,8 @@
 /* ======== GLOBAL STYLING ======== */
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #ffeef0; /* blød lyserød tone */
-  color: #333;
+  background-color: #fff0f3; /* lys pink */
+  color: #000000; /* sort tekst */
   margin: 0;
   padding: 0;
   display: flex;
@@ -17,7 +17,7 @@ header {
   background-color: #ff7aa2;
   padding: 1rem 0;
   text-align: center;
-  color: white;
+  color: #000000;
   font-size: 1.4rem;
   font-weight: bold;
   letter-spacing: 1px;
@@ -52,6 +52,7 @@ form {
 label {
   font-weight: bold;
   margin-top: 10px;
+  color: #000000;
 }
 
 input,
@@ -63,6 +64,7 @@ button {
   border-radius: 8px;
   border: 1px solid #ccc;
   font-size: 1rem;
+  color: #000000;
 }
 
 input:focus,
@@ -74,7 +76,7 @@ select:focus {
 /* ======== BUTTON ======== */
 button {
   background-color: #ff7aa2;
-  color: white;
+  color: #000000;
   font-weight: bold;
   border: none;
   padding: 12px;
@@ -124,6 +126,7 @@ legend {
   border: 1px solid #ff7aa2;
   margin-top: 8px;
   font-size: 0.9rem;
+  color: #000000;
 }
 
 .invalid {
@@ -135,14 +138,14 @@ footer {
   text-align: center;
   padding: 1rem;
   background-color: #ff7aa2;
-  color: white;
+  color: #000000;
   width: 100%;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
 }
 
 footer a {
-  color: white;
+  color: #000000;
   margin: 0 10px;
   font-weight: bold;
 }
@@ -168,3 +171,8 @@ footer a {
     font-size: 1.2rem;
   }
 }
+
+
+
+  
+
