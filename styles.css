@@ -1,98 +1,60 @@
-/* ======== GLOBAL STYLING ======== */
+:root {
+  --bg-color: #fff0f3;
+  --border-color: #cccccc;
+  --text-color: #333333;
+  --accent: #4a90e2;
+  --accent-hover: #3578d4;
+  --radius: 8px;
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #fff0f3; /* lys pink */
-  color: #000000; /* sort tekst */
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font);
   margin: 0;
-  padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh;
+  padding: 1rem;
 }
 
-/* ======== HEADER ======== */
-header {
-  width: 100%;
-  background-color: #ff7aa2;
-  padding: 1rem 0;
+.skip-link {
+  position: absolute;
+  left: -9999px;
+}
+
+
+h2 {
   text-align: center;
-  color: #000000;
-  font-size: 1.4rem;
-  font-weight: bold;
-  letter-spacing: 1px;
+  font-size: 28px;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
 }
 
-/* ======== MAIN CONTENT ======== */
-main {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
+
+h1 {
+  text-align: center;
+  font-size: 60px;
+  margin: 0.5rem 0;
+  font-weight: 700;
 }
 
-section {
-  background-color: white;
-  padding: 2rem;
-  margin: 2rem;
-  border-radius: 16px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  width: 90%;
-  max-width: 500px;
+p {
+  text-align: center;
+  color: var(--text-color);
+  font-size: 15px;
+  margin-bottom: 1.5rem;
 }
 
-/* ======== FORM ELEMENTS ======== */
-form {
-  display: flex;
-  flex-direction: column;
-}
-
-label {
-  font-weight: bold;
-  margin-top: 10px;
-  color: #000000;
-}
-
-input,
-select,
-button {
-  width: 100%;
-  padding: 10px;
-  margin-top: 4px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-  color: #000000;
-}
-
-input:focus,
-select:focus {
-  outline: 2px solid #ff7aa2;
-  border-color: #ff7aa2;
-}
-
-/* ======== BUTTON ======== */
-button {
-  background-color: #ff7aa2;
-  color: #000000;
-  font-weight: bold;
-  border: none;
-  padding: 12px;
-  margin-top: 20px;
-  cursor: pointer;
-  border-radius: 10px;
-  transition: 0.3s;
-}
-
-button:hover {
-  background-color: #ff4f85;
-}
-
-/* ======== LINKS ======== */
 a {
-  color: #ff4f85;
+  color: var(--accent);
   text-decoration: none;
 }
 
@@ -100,79 +62,159 @@ a:hover {
   text-decoration: underline;
 }
 
-/* ======== FIELDSETS ======== */
-fieldset {
-  border: 2px solid #ffe3ea;
-  border-radius: 10px;
-  padding: 10px 15px;
-  margin-top: 1rem;
+
+main {
+  background-color: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  width: 100%;
+  max-width: 500px;
 }
 
-legend {
-  font-weight: bold;
-  color: #ff4f85;
+
+form {
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
 }
 
-/* ======== PASSWORD MESSAGE ======== */
+label {
+  font-weight: 500;
+  display: inline-block;
+  margin-bottom: 0.25rem;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  font-size: 15px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus,
+select:focus {
+  border-color: var(--accent);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+}
+
+
 #message {
-  display: none;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 0.75rem;
+  background-color: #fff9fb;
+  font-size: 13px;
 }
 
-#password:focus + #message {
-  display: block;
-  background: #fff5f7;
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid #ff7aa2;
-  margin-top: 8px;
-  font-size: 0.9rem;
-  color: #000000;
+#message h3 {
+  margin-top: 0;
+  font-size: 14px;
 }
 
 .invalid {
-  color: #ff4f85;
+  color: #dc2626;
+}
+.valid {
+  color: #16a34a;
 }
 
-/* ======== FOOTER ======== */
+
+input[type="radio"],
+input[type="checkbox"] {
+  accent-color: var(--accent);
+  margin-right: 4px;
+}
+
+
+label[for="interest"],
+label[for="music"],
+label[for="travel"],
+label[for="reading"],
+label[for="cooking"],
+label[for="art"],
+label[for="fitness"],
+label[for="chess"] {
+  font-size: 13px;
+  color: var(--text-color);
+}
+
+#interest {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+input[type="checkbox"] + label {
+  margin-right: 0.8rem;
+}
+
+
+input[type="file"] {
+  border: 2px dashed var(--border-color);
+  background-color: #fafafa;
+  padding: 0.75rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+  width: 100%;
+}
+
+input[type="file"]:hover {
+  background-color: #f5f5f5;
+}
+
+button,
+input[type="submit"] {
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.9rem;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-2px);
+}
+
 footer {
   text-align: center;
-  padding: 1rem;
-  background-color: #ff7aa2;
-  color: #000000;
-  width: 100%;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
+  font-size: 13px;
+  margin: 2rem 0;
 }
 
 footer a {
-  color: #000000;
-  margin: 0 10px;
-  font-weight: bold;
+  color: var(--accent);
+  margin: 0 0.5rem;
 }
 
-/* ======== RESPONSIVE DESIGN ======== */
 @media (max-width: 600px) {
-  section {
-    padding: 1rem;
-    margin: 1rem;
-  }
-
-  input,
-  select,
-  button {
-    font-size: 0.95rem;
-  }
-
   h1 {
-    font-size: 1.5rem;
+    font-size: 38px;
   }
 
-  header {
-    font-size: 1.2rem;
+  main {
+    padding: 1.5rem;
+  }
+
+  label {
+    font-size: 14px;
   }
 }
 
 
 
   
+
 
