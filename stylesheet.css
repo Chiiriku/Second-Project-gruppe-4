@@ -76,6 +76,7 @@ header {
   justify-content: center;
   gap: 12px;
   padding: 12px 0 6px 0;
+  opacity: 40%;
 }
 header h1 {
   color: #1b1b1b;
