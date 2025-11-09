@@ -33,6 +33,19 @@
   color: #1b1b1b;
   text-decoration: underline;
 }
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 12px 0 6px 0;
+  opacity: 40%;
+}
+header h1 {
+  color: #1b1b1b;
+  margin: 0;
+  font-size: 28pt;
+}
 .header-content {
   display: flex;
   align-items: center;
@@ -70,19 +83,7 @@ main#maincontent {
   justify-content: center;
   width: 100%;
 }
-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  padding: 12px 0 6px 0;
-  opacity: 40%;
-}
-header h1 {
-  color: #1b1b1b;
-  margin: 0;
-  font-size: 28pt;
-}
+
 .form-container {
   background-color: #fff0f3;
   font-family: Arial, sans-serif;
