@@ -1,146 +1,143 @@
-<!DOCTYPE html>
-<html lang="eng">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DatingDating</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-    <h2>DatingDating.dk</h2>
-    <h1>Create your account</h1>
-    <p>or <a href="https://www.dating.dk/">sign in </a> to your account</p>
-    <main id="maincontent">
-      <form>
-        <label for="email">Email</label><br />
-        <input type="email" id="email" name="email" required /><br /><br />
 
-        <label for="password">Password</label><br />
-        <!-- OBS OBS lige nu vises krav for password meget grimt under message. Dette skal gøres med CSS -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DatingDating</title>
+    <link rel="stylesheet" href="stylesheet.css">
+  </head>
+<body>
+  <header>
+    <a href="#maincontent" class="skip-link">Skip to main content</a>
+    <div class="header-content">
+      <img class="logo" src="img/logo.png" alt="DatingDating.dk">
+      <h1 class="link"><a href="https://www.dating.dk/">DatingDating.dk</a></h1>
+    </div>
+  </header>
+  <main id="maincontent">
+  <div class="form-container">
+    <div class="signin">
+      <h2>Create your account</h2>
+      <p>Or <a href="https://www.dating.dk/">sign in</a> to your account</p>
+    </div>  
+  <form>
+  <label for="email">Email</label>
+  <input type="email" id="email" name="email" required>
+  <label for="password">Password</label>
+      <div class="password-field">
         <input
           type="password"
           id="password"
           name="password"
           pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-          required
-        />
-        <div id="message">
-          <h3>Password must contain the following:</h3>
-          <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
-          <p id="capital" class="invalid">
-            A <b>capital (uppercase)</b> letter
-          </p>
-          <p id="number" class="invalid">A <b>number</b></p>
-          <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+          required>
+      <label for="confirm-password">Confirm Password</label>
+      <input
+        type="password"
+        id="confirm-password"
+        name="confirm-password"
+        required>
+      </div>
+      <div class="form-grid">
+      <div class="form-group">
+        <label for="first-name">First name</label>
+        <input type="text" id="first-name" name="first-name" required>
+      </div>
+      <div class="form-group">
+        <label for="last-name">Last name</label>
+        <input type="text" id="last-name" name="last-name" required>
+      </div>
+      <div class="form-group">
+        <label id="gender">Gender</label>
+        <br>
+      <div class="radio-group" role="radiogroup" aria-labelledby="gender">
+      <div class="radio-item">
+        <input type="radio" id="gender-male" name="gender" value="male" class="radio-control" required>
+        <label for="gender-male">Male</label>
+      </div>
+      <div class="radio-item">
+        <input type="radio" id="gender-female" name="gender" value="female" class="radio-control" required>
+        <label for="gender-female">Female</label>
+      </div>
+      <div class="radio-item">
+        <input type="radio" id="gender-other" name="gender" value="other" class="radio-control" required>
+        <label for="gender-other">Other</label>
+      </div>
+      </div>
+      </div>
+
+          <div class="form-group">
+            <label for="dob">Date of birth</label>
+            <input type="date" id="dob" name="dob" required>
+          </div>
+          <div class="form-group">
+            <label for="zip">Zip code</label>
+            <input type="number" id="zip" name="zip" min="1" max="9999" required>
+          </div>
+          <div class="form-group">
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" required>
+          </div>
+          <div class="form-group">
+            <label for="nationality">Nationality</label>
+            <select name="nationality" id="nationality">
+              <option value="-" selected>-</option>
+              <option value="denmark">Denmark</option>
+              <option value="sweden">Sweden</option>
+              <option value="norway">Norway</option>
+              <option value="germany">Germany</option>
+              <option value="france">France</option>
+              <option value="spain">Spain</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="myRange">Match Distance</label>
+            <br>
+            <div class="slidecontainer">
+              <input type="range" min="1" max="300" value="1" class="slider" id="myRange">
+              <div class="slider-value">Kilometers: <span id="km">1</span></div>
+            </div>
+          </div>
         </div>
-        <br /><br />
+        <div class="interest">
+          <p>Interest</p>
+          <div class="interest-row" id="interest">
+            <label class="interest-item"><input type="checkbox" id="music" name="interest" value="music"> Music</label>
+            <label class="interest-item"><input type="checkbox" id="travel" name="interest" value="travel"> Travel</label>
+            <label class="interest-item"><input type="checkbox" id="reading" name="interest" value="reading"> Reading</label>
+            <label class="interest-item"><input type="checkbox" id="sports" name="interest" value="sports"> Sports</label>
+            <label class="interest-item"><input type="checkbox" id="cooking" name="interest" value="cooking"> Cooking</label>
+            <label class="interest-item"><input type="checkbox" id="movies" name="interest" value="movies"> Movies</label>
+            <label class="interest-item"><input type="checkbox" id="gaming" name="interest" value="gaming"> Gaming</label>
+            <label class="interest-item"><input type="checkbox" id="art" name="interest" value="art"> Art</label>
+            <label class="interest-item"><input type="checkbox" id="fitness" name="interest" value="fitness"> Fitness</label>
+            <label class="interest-item"><input type="checkbox" id="chess" name="interest" value="chess"> Chess</label>
+          </div>
 
-        <label for="first-name">First name</label><br />
-        <input
-          type="text"
-          id="first-name"
-          name="first-name"
-          required
-        /><br /><br />
-
-        <label for="last-name">Last name</label><br />
-        <input
-          type="text"
-          id="last-name"
-          name="last-name"
-          required
-        /><br /><br />
-
-        <label>Gender</label><br />
-        <input type="radio" id="male" name="gender" value="male" />
-        <label for="male">Male</label><br />
-        <input type="radio" id="female" name="gender" value="female" />
-        <label for="female">Female</label><br />
-        <input type="radio" id="other" name="gender" value="other" />
-        <label for="other">Other</label><br /><br />
-
-        <label for="dob">Date of birth</label><br />
-        <input type="date" id="dob" name="dob" required /><br /><br />
-
-        <label for="zip">Zip code</label><br />
-        <input
-          type="number"
-          id="zip"
-          name="zip"
-          min="1"
-          max="9999"
-          required
-        /><br /><br />
-
-        <label for="city">City</label><br />
-        <input type="text" id="city" name="city" required /><br /><br />
-
-        <label for="nationality">Nationality</label><br />
-        <select name="nationality" id="nationality">
-          <option value="denmark">Denmark</option>
-          <option value="sweden">Sweden</option>
-          <option value="norway">Norway</option>
-          <option value="germany">Germany</option>
-          <option value="france">France</option>
-          <option value="spain">Spain</option>
-        </select>
-        <br /><br />
-
-        <label for="favcolor">Favorite color</label><br />
-        <input type="color" id="favcolor" name="favcolor" /><br /><br />
-
-        <label for="interest">Interest</label><br />
-        <input type="checkbox" id="music" name="interest" value="music" />
-        <label for="music">Music</label>
-        <input type="checkbox" id="travel" name="interest" value="travel" />
-        <label for="travel">Travel</label>
-        <input type="checkbox" id="reading" name="interest" value="reading" />
-        <label for="reading">Reading</label>
-        <input type="checkbox" id="sports" name="interest" value="sports" />
-        <label for="sports">Sports</label><br />
-        <input type="checkbox" id="cooking" name="interest" value="cooking" />
-        <label for="cooking">Cooking</label>
-        <input type="checkbox" id="movies" name="interest" value="movies" />
-        <label for="movies">Movies</label>
-        <input type="checkbox" id="gaming" name="interest" value="gaming" />
-        <input type="checkbox" id="art" name="interest" value="art" />
-        <label for="art">Art</label><br />
-        <input type="checkbox" id="fitness" name="interest" value="fitness" />
-        <label for="fitness">Fitness</label>
-        <input type="checkbox" id="chess" name="interest" value="chess" />
-        <label for="chess">Chess</label>
-
-        <br /><br />
-
-        <label for="passport">Picture of passport</label><br />
-        <input type="file" id="passport" name="passport" required />
-        <input type="submit" />
-
-        <br /><br />
-
-        <label for="terms"
-          >I accept <a href="https://www.dating.dk/">DatingDating.dk's</a> terms
-          of service
-        </label>
-        <input type="checkbox" id="terms" name="terms" value="yes" required />
-        <br />
-        <label for="newsletter">I would like to receive a newsletter</label>
-        <input
-          type="checkbox"
-          id="newsletter"
-          name="newsletter"
-          value="yes"
-          required
-        />
-
-        <br /><br />
-        <button type="submit">Create account</button>
-      </form>
-    </main>
+        <div class="passport">
+          <p>Picture of passport</p>
+          <input type="file" id="passport" name="passport" accept="image/*" capture="environment" required>
+        </div>
+        
+    <div class="terms">
+          <label for="terms">I accept <a href="https://www.dating.dk/">DatingDating.dk's</a> terms of service</label>
+          <input type="checkbox" id="terms" name="terms" value="yes" required>
+          <span id="terms-error" class="form-error" role="alert" aria-live="polite" hidden></span>
+    </div>
+    <div class="newsletter">
+    <label for="newsletter">I would like to receive newsletters</label>
+    <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+    </div>
+    <div class="submit-button">
+  <button class="button" type="submit" id="create-account">Create account</button>
+    </div>
+    </div>
+  </form>
+  </div>
+  </main>
     <footer>
-      <a href="https://www.dating.dk/">Terms of Use</a>
-      <a href="https://www.dating.dk/">Privacy Policy</a>
+      <a href="https://www.dating.dk/">Terms of Use</a><span> | </span><a href="https://www.dating.dk/">Privacy Policy</a>
     </footer>
   </body>
 </html>
