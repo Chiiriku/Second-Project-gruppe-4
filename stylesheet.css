@@ -142,6 +142,30 @@ select {
   font-size: 14pt;
 }
 
+.password-field {
+  position: relative;
+  display: inline-block;
+}
+
+.password-requirements {
+  display: none;
+  position: absolute;
+  top: 40%;
+  left: 0;
+  width: 250px;
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 0.9em;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 0;
+}
+
+.password-field input:focus + .password-requirements {
+  display: block;
+}
+
+
 .form-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -192,7 +216,6 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M7 10l5 5 5-5z' fill='%23222'/></svg>");
   background-repeat: no-repeat;
   background-position: right 10px center;
   background-size: 20px 20px;
