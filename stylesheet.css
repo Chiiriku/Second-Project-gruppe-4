@@ -23,7 +23,7 @@
   z-index: 100;
   border-radius: 4px;
   text-decoration: none;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
 }
 .link a {
   color: #1b1b1b;
@@ -51,7 +51,10 @@
   margin: 0;
   font-size: 28pt;
 }
-html, body { height: 100%; }
+html,
+body {
+  height: 100%;
+}
 body {
   min-height: 100vh;
   display: flex;
@@ -80,12 +83,12 @@ header h1 {
   font-size: 28pt;
 }
 .form-container {
-  background-color: #FFF0F3;
+  background-color: #fff0f3;
   font-family: Arial, sans-serif;
-  margin: 0; /* centered via body flexbox */
+  margin: 0;
   padding: 40px;
   width: 800px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   max-width: calc(100% - 40px);
 }
 .signin {
@@ -107,9 +110,8 @@ h2 {
   font-weight: 300;
 }
 a {
-  color: #477AAB;
+  color: #477aab;
   text-decoration: underline;
-
 }
 a:hover {
   color: #5da8ed;
@@ -122,7 +124,14 @@ label {
   font-size: 14pt;
   font-weight: bold;
 }
-input[type="text"], input[type="email"], input[type="password"], input[type="date"], input[type="number"], input[type="file"], input[type="color"], select {
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="number"],
+input[type="file"],
+input[type="color"],
+select {
   width: 100%;
   padding: 10px 20px;
   margin: 8px 0 20px 0;
@@ -133,11 +142,10 @@ input[type="text"], input[type="email"], input[type="password"], input[type="dat
   font-size: 14pt;
 }
 
-/* 50/50 two column grid */
 .form-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* 50% / 50% */
-  gap: 18px 24px; /* row gap column gap */
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 24px;
   align-items: start;
 }
 .form-grid .form-group label {
@@ -149,8 +157,8 @@ input[type="text"], input[type="email"], input[type="password"], input[type="dat
 .form-grid .radio-group {
   width: 100%;
   box-sizing: border-box;
-} 
- 
+}
+
 .radio-group {
   display: flex;
   gap: 16px;
@@ -186,9 +194,9 @@ input[type="text"], input[type="email"], input[type="password"], input[type="dat
   appearance: none;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M7 10l5 5 5-5z' fill='%23222'/></svg>");
   background-repeat: no-repeat;
-  background-position: right 10px center; 
+  background-position: right 10px center;
   background-size: 20px 20px;
-  padding-right: 44px; /* room for the larger arrow */
+  padding-right: 44px;
 }
 
 select#nationality::-ms-expand {
@@ -209,8 +217,8 @@ select#nationality::-ms-expand {
   height: 14px;
   border-radius: 5px;
   background: #e8e8e8;
-  transition: opacity .2s;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: opacity 0.2s;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 .slider:hover {
@@ -234,17 +242,15 @@ select#nationality::-ms-expand {
   padding-top: 40px;
 }
 .interest-row {
-  display: block;
-  padding: 0;
-  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 400px;
 }
 .interest-row .interest-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 0;
-  width: 100%;
   box-sizing: border-box;
+  padding: 10px;
+  text-align: center;
 }
 .interest-row .interest-item input[type="checkbox"] {
   margin: 0;
@@ -254,7 +260,7 @@ select#nationality::-ms-expand {
   font-size: 12pt;
   line-height: 1.4;
 }
- 
+
 input[type="file"] {
   max-width: 100%;
   width: auto;
@@ -277,7 +283,8 @@ input[type="file"] {
   font-weight: bold;
 }
 
-.terms, .newsletter {
+.terms,
+.newsletter {
   margin-top: 12px;
   font-size: 14pt;
   text-align: left;
@@ -287,7 +294,7 @@ input[type="file"] {
   margin-top: 30px;
 }
 button[type="submit"] {
-  background-color: #2B78E4;
+  background-color: #2b78e4;
   outline: solid #1b1b1b 2px;
   color: white;
   padding: 14px 20px;
@@ -298,22 +305,32 @@ button[type="submit"] {
   font-size: 16pt;
   width: 100%;
 }
-input[type="text"]:focus-visible, input[type="email"]:focus-visible, input[type="password"]:focus-visible,
-input[type="date"]:focus-visible, input[type="number"]:focus-visible, select:focus-visible,
-.file-btn:focus-visible, button:focus-visible {
+input[type="text"]:focus-visible,
+input[type="email"]:focus-visible,
+input[type="password"]:focus-visible,
+input[type="date"]:focus-visible,
+input[type="number"]:focus-visible,
+select:focus-visible,
+.file-btn:focus-visible,
+button:focus-visible {
   outline: 3px solid #005fcc;
   outline-offset: 2px;
 }
 
-input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus,
-input[type="date"]:focus, input[type="number"]:focus, select:focus,
-.file-btn:focus, button:focus {
-  outline: 3px solid rgba(0,95,204,0.9);
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus,
+input[type="number"]:focus,
+select:focus,
+.file-btn:focus,
+button:focus {
+  outline: 3px solid rgba(0, 95, 204, 0.9);
   outline-offset: 2px;
 }
 button[type="submit"]:hover {
   background-color: #1b5fbd;
-}  
+}
 footer {
   text-align: center;
   font-size: 16pt;
@@ -336,20 +353,43 @@ footer {
     padding: 24px;
     box-shadow: none;
   }
-  .file-btn { font-size: 1.083rem; padding-inline: 20px; }
-  .form-grid { gap: 14px 12px; }
-  input[type="text"], input[type="email"], input[type="password"], input[type="date"], input[type="number"], select {
+  .file-btn {
+    font-size: 1.083rem;
+    padding-inline: 20px;
+  }
+  .form-grid {
+    gap: 14px 12px;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="date"],
+  input[type="number"],
+  select {
     padding: 8px 12px;
     font-size: 13pt;
   }
-  .interest-row { gap: 10px; flex-wrap: wrap; overflow-x: visible; }
-  header h1 { font-size: 22pt; }
+  header h1 {
+    font-size: 22pt;
+  }
 }
 
 @media (max-width: 420px) {
-  .form-container { padding: 16px; }
-  .file-preview img { max-width: 120px; max-height: 90px; }
-  header { padding: 10px 8px; }
-  .logo { max-width: 64px; }
-  .header-content { padding-top: 12px; padding-bottom: 12px; }
+  .form-container {
+    padding: 16px;
+  }
+  .file-preview img {
+    max-width: 120px;
+    max-height: 90px;
+  }
+  header {
+    padding: 10px 8px;
+  }
+  .logo {
+    max-width: 64px;
+  }
+  .header-content {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
 }
