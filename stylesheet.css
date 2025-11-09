@@ -157,14 +157,13 @@ select {
   border: 1px solid #ccc;
   padding: 10px;
   font-size: 0.9em;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   z-index: 0;
 }
 
 .password-field input:focus + .password-requirements {
   display: block;
 }
-
 
 .form-grid {
   display: grid;
