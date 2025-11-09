@@ -215,8 +215,8 @@ select {
 #nationality {
   -webkit-appearance: none;
   -moz-appearance: none;
+  background: #f8f8f8;
   appearance: none;
-  background-repeat: no-repeat;
   background-position: right 10px center;
   background-size: 20px 20px;
   padding-right: 44px;
