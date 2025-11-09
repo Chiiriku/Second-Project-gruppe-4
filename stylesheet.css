@@ -317,9 +317,9 @@ input[type="file"] {
   margin-top: 30px;
 }
 button[type="submit"] {
-  background-color: #2b78e4;
+  background-color: #fb6f92;
   outline: solid #1b1b1b 2px;
-  color: white;
+  color: black;
   padding: 14px 20px;
   margin: 20px 0;
   border: none;
@@ -336,7 +336,7 @@ input[type="number"]:focus-visible,
 select:focus-visible,
 .file-btn:focus-visible,
 button:focus-visible {
-  outline: 3px solid #005fcc;
+  outline: 3px solid #fb6f92;
   outline-offset: 2px;
 }
 
@@ -348,11 +348,11 @@ input[type="number"]:focus,
 select:focus,
 .file-btn:focus,
 button:focus {
-  outline: 3px solid rgba(0, 95, 204, 0.9);
+  outline: 3px solid #fb6f92;
   outline-offset: 2px;
 }
 button[type="submit"]:hover {
-  background-color: #1b5fbd;
+  background-color: #fb6f92;
 }
 footer {
   text-align: center;
